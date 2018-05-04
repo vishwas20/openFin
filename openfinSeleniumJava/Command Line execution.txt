@@ -1,0 +1,21 @@
+@ECHO OFF
+REM This script is intended to launch SalesbookLite and other applications from OpenFin on any machine
+REM Prior to execution of scripts set below paths
+
+SET pathToRunOpenFin=c:\Users\vivek.mamgain\Desktop\hello-openfin-selenium-java-example-master\release
+SET pathToDependenciesJars=c:\Users\vivek.mamgain\Desktop\hello-openfin-selenium-java-example-master\release
+SET pathToTestClasses=c:\Users\vivek.mamgain\Desktop\hello-openfin-selenium-java-example-master\target\classes
+
+echo %pathToRunOpenFin%
+echo %pathToDependenciesJars%
+echo %pathToDependenciesJars%
+
+
+SET pathToDependenciesJars1=%pathToDependenciesJars%^\hello-openfin-selenium-jar-with-dependencies.jar
+SET pathToSelenium1=%pathToSelenium%^\selenium-server-standalone-3.6.0.jar
+
+
+
+CD /D C:\
+
+java -cp "%pathToTestClasses%;%pathToDependenciesJars1%;%pathToSelenium1%" openfin.launch.TestOpenFin %pathToRunOpenFin%
